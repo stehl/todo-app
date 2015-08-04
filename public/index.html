@@ -14,13 +14,15 @@
 
     <script src="core.js"></script>
 
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAChYRQAoWEUAKFhFAChYRQAoWEUAKFhFAChYRRvoWEU/6FhFP+hYRRvoWEUEKFhFAChYRQAoWEUAKFhFAChYRQAoWEUAKFhFAChYRQAoWEUAKFhFAChYRT0oWEU/w7J8v8Hzvz/oWEU9KFhFPyhYRQPoWEUAKFhFAChYRQAoWEUAKFhFAChYRQAoWEUAKFhFACbZRz7oWEU/w7J8v9mtLL/ZrSy/wfN+/+dZBr6oGIW/aFhFBChYRQAoWEUAKFhFAChYRQAoWEUAKFhFACgYRX0oWEU/w7J8v9mtLL/oWEU/6FhFP9mtLL/Ccz5/5pmH/+eYxn/oWEUDqFhFAChYRQAoWEUAKFhFACdZBr4oWEU/w/I8P+hYRT/oWEU/6FhFP+hYRT/oWEU/6FhFP8JzPn/mWcg/59jGPyhYRQOoWEUAKFhFAChYRT0oWEU/w7J8v+hYRT/Y5N6/yizxP+hYRT/oWEU/ya1x/9cknz/oWEU/wnM+f+cZBv6oWEU+KFhFBChYRRvoWEU/w7J8v9YpJv/e4FW/wXP//8Fz///oWEU/6FhFP8Fz///Bc///3uBVv9imob/C8v3/6FhFPOhYRRvoWEU/w7J8v8Fz///e4FW/xHI7v8E0P//Bc///6FhFP+hYRT/Bc///wTP//8Oy/P/e4FW/wXP//8Ly/b/oWEU+qFhFP8Fz///Bc///wXP//8D0P//Bc///wXP//+hYRT/oWEU/wXP//8Fz///Bc///wXP//8Fz///Bc///6FhFPmhYRRvoWEU8QXP//8Fz///Bc///wXP//8Fz///oWEU/6FhFP8Fz///Bc///wXP//8Fz///Bc///6FhFNyhYRRvoWEUEKFhFP+bZRz5Bc///wXP//8Fz///Bc///6FhFP+hYRT/Bc///wPQ//8Fz///Bc///5NrKfGhYRT/oWEUJ6FhFAChYRQSoWEU/5doJP8A0f//PLnG/3uBVv97gVb/e4FW/3uBVv8twdn/Bc///4pxNv+hYRT/oWEUJ6FhFAChYRQAoWEUAKFhFBOhYRT/lmkl/0K3wP+hYRT/oWEU/6FhFP+hYRT/M7/V/4pxNv+hYRT/oWEUJ6FhFAChYRQAoWEUAKFhFAChYRQAoWEUE6FhFP+WaSX/Bc///6FhFP+hYRT/Bc///4twNP+hYRT/oWEUJ6FhFAChYRQAoWEUAKFhFAChYRQABc//C6FhFAChYRQVoWEU/5ZpJf9mtLL/ZrSy/5FtLvqhYRT/oWEUJ6FhFAAFz/8DoWEUAKFhFAChYRQAoWEUAKFhFAChYRQAoWEUAKFhFBahYRRvn2IX/p9jF/6YaCJ2oWEUJ6FhFAChYRQAoWEUAKFhFAChYRQA/n8AAPgfAADwDwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAgAEAAIABAADAAwAA4AcAAPAPAAD4HwAA/n8AAA==" rel="icon" type="image/x-icon" />
+
 	<title>Todo App</title>
 </head>
 <body ng-controller="mainController">
 <div class="container">
 	<nav>
 		<div class="nav-wrapper">
-			<a href="#" class="brand-logo">Todo List</a>
+			<a href="#" class="brand-logo center">Todo List</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="//stehl.github.io/">GitHub</a></li>
 				<li><a href="//twitter.com/real_stehl">Twitter</a></li>
@@ -35,18 +37,17 @@
 				<li class="collection-item" ng-repeat="todo in todos">
 					<div>{{ todo.text }}<a href="#!" class="secondary-content" ng-click="deleteTodo(todo._id)"><i class="material-icons">delete</i></a></div>									
 				</li>
-				<li>
+				<li class="collection-item">
 					<div class="row">
-						<div class="container">
-							<div class="valign-wrapper">
-								<div class="input-field col s8 valign">
-									<input type="text" id="todo-text" ng-model="formData.text" placeholder="Buy soy milk for my vegan diet">
-									<label for="todo-text">Content</label>
-								</div>
-								<a href="#" class="btn waves-light waves-effect col s4 valign" ng-click="createTodo()">Add</a>		
+						<div class="valign-wrapper">
+							<div class="input-field col s8 valign">
+								<input type="text" id="todo-text" ng-model="formData.text" placeholder="Buy soy milk for my vegan diet">
+								<label for="todo-text">Content</label>
 							</div>
-											
-						</div>					
+							<div class="col s1 offset-s3">
+								<a href="#" class="btn waves-light waves-effect valign" ng-click="createTodo()"><i class="material-icons">add</i></a>
+							</div>									
+						</div>				
 					</div>					
 				</li>
 			</form>				
