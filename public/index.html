@@ -40,7 +40,7 @@
 			<div class="col s12 m8">
 				<ul class="collection with-header">
 				<form action="#" ng-submit="createTodo()">
-					<li class="collection-header"><h3 class="center-align">Things to do : <span class="new badge">{{ todos.length }}</span></h3></li>
+					<li class="collection-header"><h3 class="center-align">Things to do<span class="new badge">{{ todos.length }}</span></h3></li>
 					<li class="collection-item" ng-repeat="todo in todos">
 						<div>{{ todo.text }}<a href="#!" class="secondary-content" ng-click="deleteTodo(todo._id)"><i class="material-icons">delete</i></a></div>									
 					</li>
