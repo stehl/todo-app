@@ -2,6 +2,7 @@ var scotchTodo = angular.module('scotchTodo', []);
 
 function mainController($scope, $http) {
 	$scope.formData = {};
+	$scope.date = new Date();
 
 	$http.get('/api/todos')
 		.success(function(data){
